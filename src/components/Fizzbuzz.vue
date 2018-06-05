@@ -1,5 +1,6 @@
 <template>
   <div class="fizzbuzz">
+    <div class="info">
       <div id="currentScore">
         <p>Score: 0</p>
       </div>
@@ -10,18 +11,31 @@
         <p>High score: 0</p>
       </div>
     </div>
+    <buttons></buttons>
+  </div>
 </template>
+
+<script>
+import Buttons from './Buttons'
+
+export default {
+  name: 'fizzbuzz',
+  components: {
+    Buttons
+  }
+}
+</script>
 
 <style scoped>
 
-.fizzbuzz{
+.info{
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   width: 50%;
 }
 
-.fizzbuzz > div {
+.info > div {
   margin: 10px;
   width: 33%;
   display: flex;

@@ -2,7 +2,6 @@
   <div id="app">
     <h1>Fizzbuzz Game</h1>
     <fizzbuzz></fizzbuzz>
-    <buttons></buttons>
     <footer>
       <p>The icons above are designed by Good Ware from <a href="https://www.flaticon.com/packs/transportation-46">Flaticon</a>.</p>
     </footer>

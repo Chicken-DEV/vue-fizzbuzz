@@ -35,6 +35,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'buttons'
+}
+</script>
+
 <style scoped>
 
 .buttons {
@@ -60,5 +66,3 @@
   width: 40%;
 }
 </style>
-
-
