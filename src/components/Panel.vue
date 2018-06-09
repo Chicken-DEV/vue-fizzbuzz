@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'button',
+  name: 'panel',
   props: ['text', 'srcPath', 'srcAlt']
 }
 </script>
