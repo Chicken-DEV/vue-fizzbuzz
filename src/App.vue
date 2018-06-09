@@ -10,7 +10,6 @@
 
 <script>
 import Fizzbuzz from './components/Fizzbuzz'
-import Panel from './components/Panel'
 
 export default {
   name: 'App',
