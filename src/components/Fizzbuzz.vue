@@ -5,7 +5,7 @@
         <p>Score: 0</p>
       </div>
       <div id="question">
-        <p id="nextNumber">13</p>
+        <p id="nextNumber">{{ number }}</p>
       </div>
       <div id="highScore">
         <p>High score: 0</p>
@@ -22,6 +22,19 @@ export default {
   name: 'fizzbuzz',
   components: {
     Buttons
+  },
+  data: function() {
+    return {
+      number: 0
+    }
+  },
+  methods: {
+    generateNumber() {
+      this.number = Math.floor(Math.random() * 1001)
+    }
+  },
+  created() {
+    this.generateNumber()
   }
 }
 </script>
