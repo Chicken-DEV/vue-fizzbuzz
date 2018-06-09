@@ -10,13 +10,12 @@
 
 <script>
 import Fizzbuzz from './components/Fizzbuzz'
-import Buttons from './components/Buttons'
+import Panel from './components/Panel'
 
 export default {
   name: 'App',
   components: {
-    Fizzbuzz,
-    Buttons
+    Fizzbuzz
   }
 }
 </script>

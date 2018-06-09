@@ -11,17 +11,22 @@
         <p>High score: 0</p>
       </div>
     </div>
-    <buttons></buttons>
+    <div class="panels">
+      <panel text="Not divisible" srcPath="/static/images/none.png" srcAlt="none"></panel>
+      <panel text="Fizz" srcPath="/static/images/fizz.png" srcAlt="fizz"></panel>
+      <panel text="Buzz" srcPath="/static/images/buzz.png" srcAlt="buzz"></panel>
+      <panel text="FizzBuzz" srcPath="/static/images/fizzbuzz.png" srcAlt="fizzbuzz"></panel>
+    </div>
   </div>
 </template>
 
 <script>
-import Buttons from './Buttons'
+import Panel from './Panel'
 
 export default {
   name: 'fizzbuzz',
   components: {
-    Buttons
+    Panel
   },
   data: function() {
     return {
@@ -71,4 +76,13 @@ export default {
   font-size: 250%;
   margin: 0px;
 }
+
+.panels {
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 </style>
