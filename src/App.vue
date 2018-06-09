@@ -30,7 +30,7 @@ html, body {
 
 #app {
   font-family: 'Avenir', Verdana, Tahoma, sans-serif;
-  font-size: 30px;
+  font-size: calc(18px + 0.25vw);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
