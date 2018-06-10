@@ -32,7 +32,7 @@ export default {
   data: function() {
     return {
       score: 0,
-      number: 630
+      number: 0
     }
   },
   methods: {
