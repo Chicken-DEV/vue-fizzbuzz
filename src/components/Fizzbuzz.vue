@@ -2,7 +2,7 @@
   <div class="fizzbuzz">
     <div class="info">
       <div id="currentScore">
-        <p>Score: 0</p>
+        <p>Score: {{ score }}</p>
       </div>
       <div id="question">
         <p id="nextNumber">{{ number }}</p>
@@ -12,16 +12,17 @@
       </div>
     </div>
     <div class="panels">
-      <panel text="Not divisible" srcPath="/static/images/none.png" srcAlt="none"></panel>
-      <panel text="Fizz" srcPath="/static/images/fizz.png" srcAlt="fizz"></panel>
-      <panel text="Buzz" srcPath="/static/images/buzz.png" srcAlt="buzz"></panel>
-      <panel text="FizzBuzz" srcPath="/static/images/fizzbuzz.png" srcAlt="fizzbuzz"></panel>
+      <panel @select="judge" text="Not divisible" srcPath="/static/images/none.png" srcAlt="none"></panel>
+      <panel @select="judge" text="Fizz" srcPath="/static/images/fizz.png" srcAlt="fizz"></panel>
+      <panel @select="judge" text="Buzz" srcPath="/static/images/buzz.png" srcAlt="buzz"></panel>
+      <panel @select="judge" text="FizzBuzz" srcPath="/static/images/fizzbuzz.png" srcAlt="fizzbuzz"></panel>
     </div>
   </div>
 </template>
 
 <script>
 import Panel from './Panel'
+import {calculateNum} from '../util/fizzbuzz'
 
 export default {
   name: 'fizzbuzz',
@@ -30,12 +31,22 @@ export default {
   },
   data: function() {
     return {
-      number: 0
+      score: 0,
+      number: 630
     }
   },
   methods: {
     generateNumber() {
       this.number = Math.floor(Math.random() * 1001)
+    },
+    judge(ans) {
+      if (calculateNum(this.number) === ans) {
+        this.score++
+      }
+      else {
+        if (this.score > 0) this.score--
+      }
+      this.generateNumber()
     }
   },
   created() {

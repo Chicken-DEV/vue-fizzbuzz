@@ -1,5 +1,5 @@
 <template>
-  <div class="panel">
+  <div class="panel" @click="clickAns">
       <div class="thumbnail">
         <img :src="srcPath" :alt="srcAlt">
       </div>
@@ -12,7 +12,12 @@
 <script>
 export default {
   name: 'panel',
-  props: ['text', 'srcPath', 'srcAlt']
+  props: ['text', 'srcPath', 'srcAlt'],
+  methods: {
+    clickAns: function() {
+      this.$emit('select', this.text)
+    }
+  }
 }
 </script>
 
