@@ -23,18 +23,6 @@ export default {
 
 <style scoped>
 
-@keyframes buttonClick {
-  0% {
-    background-color: #b3f274;
-  }
-  50% {
-    background-color: #8aff16;
-  }
-  100% {
-    background-color: #b3f274;
-  }
-}
-
 .panel {
   display: inline-block;
   margin: 1%;
