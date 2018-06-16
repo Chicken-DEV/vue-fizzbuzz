@@ -33,6 +33,7 @@ export default {
     return {
       score: 0,
       number: 0,
+      oldColor: '#d9ffb3',
       trueColor: '#0b6121',
       falseColor: '#ff0000'
     }
@@ -57,8 +58,7 @@ export default {
         if (this.score > 0) this.score--
         blinkColor = this.falseColor
       }
-      let oldColor = event.target.style.background
-      this.blinkButton(blinkColor, oldColor, event)
+      this.blinkButton(blinkColor, this.oldColor, event)
       this.generateNumber()
     }
   },
