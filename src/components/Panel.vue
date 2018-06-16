@@ -14,8 +14,8 @@ export default {
   name: 'panel',
   props: ['text', 'srcPath', 'srcAlt'],
   methods: {
-    clickAns: function() {
-      this.$emit('select', this.text)
+    clickAns: function(event) {
+      this.$emit('select', this.text, event)
     }
   }
 }
@@ -25,13 +25,13 @@ export default {
 
 @keyframes buttonClick {
   0% {
-    background-color: #83cd29;
+    background-color: #b3f274;
   }
   50% {
     background-color: #8aff16;
   }
   100% {
-    background-color: #83cd29;
+    background-color: #b3f274;
   }
 }
 
@@ -43,6 +43,7 @@ export default {
   border-color: #83cd29;
   border-radius: 10px;
   text-align: center;
+  transition: background-color 1s ease-in-out;
 }
 
 .panel:hover {

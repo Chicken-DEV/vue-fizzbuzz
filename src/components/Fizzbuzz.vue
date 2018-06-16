@@ -32,20 +32,33 @@ export default {
   data: function() {
     return {
       score: 0,
-      number: 0
+      number: 0,
+      trueColor: '#0b6121',
+      falseColor: '#ff0000'
     }
   },
   methods: {
     generateNumber() {
       this.number = Math.floor(Math.random() * 1001)
     },
-    judge(ans) {
+    blinkButton(blinkColor, oldColor, event) {
+      event.target.style.background = blinkColor
+      setTimeout(() => {
+        event.target.style.background = oldColor
+      }, 1100)
+    },
+    judge(ans, event) {
+      let blinkColor
       if (calculateNum(this.number) === ans) {
         this.score++
+        blinkColor = this.trueColor
       }
       else {
         if (this.score > 0) this.score--
+        blinkColor = this.falseColor
       }
+      let oldColor = event.target.style.background
+      this.blinkButton(blinkColor, oldColor, event)
       this.generateNumber()
     }
   },
