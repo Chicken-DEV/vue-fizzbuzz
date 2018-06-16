@@ -34,7 +34,7 @@ export default {
       score: 0,
       number: 0,
       oldColor: '#d9ffb3',
-      trueColor: '#0b6121',
+      trueColor: '#76e893',
       falseColor: '#ff0000'
     }
   },
