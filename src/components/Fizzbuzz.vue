@@ -45,7 +45,7 @@ export default {
       event.target.style.background = blinkColor
       setTimeout(() => {
         event.target.style.background = oldColor
-      }, 1100)
+      }, 200)
     },
     judge(ans, event) {
       let blinkColor

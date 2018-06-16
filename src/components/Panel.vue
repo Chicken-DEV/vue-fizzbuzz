@@ -43,12 +43,16 @@ export default {
   border-color: #83cd29;
   border-radius: 10px;
   text-align: center;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
 }
 
 .panel:hover {
-  background-color: #b3f274;
+  border-color: #5f9ea0;
   cursor: pointer;
+}
+
+.panel * {
+  pointer-events: none;
 }
 
 .thumbnail > img {
