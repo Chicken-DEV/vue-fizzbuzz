@@ -1,14 +1,13 @@
 <template>
   <div class="fizzbuzz">
     <div class="info">
-      <div id="currentScore">
-        <p>Score: {{ score }}</p>
+      <div>
       </div>
       <div id="question">
         <p id="nextNumber">{{ number }}</p>
       </div>
-      <div id="highScore">
-        <p>High score: 0</p>
+      <div id="currentScore">
+        <p>Score: {{ score }}</p>
       </div>
     </div>
     <div class="panels">
@@ -85,10 +84,6 @@ export default {
 }
 
 #currentScore {
-  justify-content: flex-start;
-}
-
-#highScore {
   justify-content: flex-end;
 }
 
