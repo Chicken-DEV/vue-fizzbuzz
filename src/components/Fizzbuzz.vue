@@ -105,7 +105,7 @@ export default {
   margin: 0 auto;
   width: 50%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
