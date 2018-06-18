@@ -1,6 +1,6 @@
 # vue-fizzbuzz
 
-![Screenshot](https://imgur.com/zqvV0bI "Screenshot")
+![Screenshot](https://i.imgur.com/zqvV0bI.gif "Screenshot")
 
-Play at [https://vue-fizzbuzz.netlify.com/](https://vue-fizzbuzz.netlify.com/#/).
+Play at [https://vue-fizzbuzz.netlify.com/](https://vue-fizzbuzz.netlify.com/).
 Created for my Vue.js practice.
